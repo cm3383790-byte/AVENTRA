@@ -1,0 +1,180 @@
+/* BASE: estilos organizados por función */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* COLORES Y VARIABLES */
+
+:root {
+  --navy: #142630;
+  --teal: #167f83;
+  --cyan: #4EBFC2;
+  --cream: #F5F2E8;
+  --error: #E25B53;
+  --white: #fff;
+  --muted: #5f6d73;
+  --line: #dfe7e4;
+  --shadow: 0 18px 50px rgba(20, 38, 48, .09);
+}
+
+/* REGLAS BÁSICAS */
+
+* {
+  box-sizing: border-box;
+}
+
+/* DOCUMENTO */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: page-transition-out .28s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+::view-transition-new(root) {
+  animation: page-transition-in .65s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes page-transition-out {
+  to {
+    opacity: 0;
+    transform: scale(.99);
+  }
+}
+
+@keyframes page-transition-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
+@keyframes page-transition-fade-out {
+  to {
+    opacity: .65;
+  }
+}
+
+@keyframes page-transition-fade-in {
+  from {
+    opacity: .35;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* TIPOGRAFÍA Y CUERPO */
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--navy);
+  font-family: 'DM Sans', Aptos, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+main {
+  animation: page-content-enter 1s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes page-content-enter {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main {
+    animation: none;
+  }
+}
+
+@keyframes page-content-fade {
+  from {
+    opacity: .25;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ENLACES */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* CONTROLES */
+
+button,input,select {
+  font: inherit;
+}
+
+/* TRANSICIONES */
+
+button,a,input,select {
+  transition: all .2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* ENLACES */
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 10000;
+  top: 12px;
+  left: 12px;
+  padding: 10px 16px;
+  transform: translateY(-160%);
+  border-radius: 8px;
+  background: var(--navy);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}

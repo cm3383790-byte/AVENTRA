@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encuentra los destinos que guardaste y vuelve f&#225;cilmente a planear tu pr&#243;xima aventura.">
+    <meta name="theme-color" content="#142630">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="AVENTRA">
+    <meta property="og:title" content="Favoritos | AVENTRA">
+    <meta property="og:description" content="Encuentra los destinos que guardaste y vuelve f&#225;cilmente a planear tu pr&#243;xima aventura.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Favoritos | AVENTRA">
+    <meta name="twitter:description" content="Encuentra los destinos que guardaste y vuelve f&#225;cilmente a planear tu pr&#243;xima aventura.">
+    <link rel="icon" type="image/png" href="../img/logo/media_2.png">
+    <title>Favoritos | AVENTRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+      <input class="mobile-menu-toggle" id="menu-movil" type="checkbox" aria-label="Mostrar menú de navegación">
+      <label class="mobile-menu-button" for="menu-movil" aria-controls="main-nav mobile-account"><span aria-hidden="true">☰</span><span>Menú</span></label>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="../index.html">Inicio</a>
+        <a href="destinos.html">Destinos</a>
+        <a href="favoritos.html" class="active">Favoritos</a>
+        <a href="itinerario.html">Itinerario</a>
+        <a href="acerca.html">Acerca de</a>
+      </nav>
+      <a id="mobile-account" class="account-link" href="login.html"><span class="account-icon" aria-hidden="true">◉</span> Cuenta</a>
+    </header>
+    <main id="contenido-principal">
+      <section class="favorites-section" id="favoritos">
+        <header class="favorites-hero">
+          <img class="favorites-hero-image" src="../img/imaginicio/imagen-superior-opt.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async">
+          <div class="favorites-hero-layout">
+            <div class="favorites-hero-content">
+              <p class="eyebrow">TU LISTA PERSONAL · AVENTRA</p>
+              <h1>Mis destinos favoritos</h1>
+              <p>Tus lugares guardados para tenerlos siempre a mano.</p>
+              <a class="btn btn-primary favorites-explore-link" href="destinos.html">Explorar destinos <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="favorites-showcase">
+              <div class="favorites-hero-tools">
+                <span class="count-pill">0 guardados</span>
+                <div class="favorites-scroll-controls" aria-label="Desplazar favoritos">
+                  <button class="favorites-scroll-button" type="button" data-favorites-scroll="-1" aria-label="Ver favoritos anteriores">←</button>
+                  <button class="favorites-scroll-button" type="button" data-favorites-scroll="1" aria-label="Ver siguientes favoritos">→</button>
+                </div>
+              </div>
+              <div class="favorite-list" aria-label="Destinos favoritos, desplázate horizontalmente" aria-live="polite" tabindex="0" hidden></div>
+              <div class="empty-state favorites-empty">
+                <span class="empty-icon" aria-hidden="true">♡</span>
+                <h3>Aún no tienes favoritos</h3>
+                <p>Guarda aquí los destinos que quieres visitar.</p>
+              </div>
+            </div>
+          </div>
+        </header>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-wrap footer-inner">
+        <a class="brand brand-light" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+        <p>Explora. Planifica. Vive la aventura.</p>
+        <a href="../index.html">Volver al inicio ↑</a>
+        <a href="privacidad.html">Privacidad y datos</a>
+        <small>© 2026 AVENTRA · Proyecto académico</small>
+      </div>
+    </footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

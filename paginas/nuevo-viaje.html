@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crea un itinerario con destino, fechas, presupuesto, actividades y una lista para empacar.">
+    <meta name="theme-color" content="#142630">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="AVENTRA">
+    <meta property="og:title" content="Nuevo viaje | AVENTRA">
+    <meta property="og:description" content="Crea un itinerario con destino, fechas, presupuesto, actividades y una lista para empacar.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nuevo viaje | AVENTRA">
+    <meta name="twitter:description" content="Crea un itinerario con destino, fechas, presupuesto, actividades y una lista para empacar.">
+    <link rel="icon" type="image/png" href="../img/logo/media_2.png">
+    <title>Nuevo viaje | AVENTRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+      <input class="mobile-menu-toggle" id="menu-movil" type="checkbox" aria-label="Mostrar menú de navegación">
+      <label class="mobile-menu-button" for="menu-movil" aria-controls="main-nav mobile-account"><span aria-hidden="true">☰</span><span>Menú</span></label>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="../index.html">Inicio</a>
+        <a href="destinos.html">Destinos</a>
+        <a href="favoritos.html">Favoritos</a>
+        <a href="itinerario.html" class="active">Itinerario</a>
+        <a href="acerca.html">Acerca de</a>
+      </nav>
+      <a id="mobile-account" class="account-link" href="login.html"><span class="account-icon" aria-hidden="true">◉</span> Cuenta</a>
+    </header>
+    <main id="contenido-principal">
+      <section class="planner-section">
+        <div class="section-wrap planner-layout">
+          <div class="planner-intro">
+            <p class="eyebrow"><span class="planner-live-dot"></span> ORGANIZA TU EXPERIENCIA</p>
+            <h2>Tu próxima<br>gran historia<br><span>empieza aquí.</span></h2>
+            <p class="muted">Elige un destino, marca tus fechas y dale forma a una aventura hecha para ti.</p>
+            <div class="planner-benefits">
+              <div><span aria-hidden="true">⌖</span><p><strong>Tu destino</strong><small>El mundo está a un clic</small></p></div>
+              <div><span aria-hidden="true">▦</span><p><strong>Tus fechas</strong><small>Elige cuándo comienza</small></p></div>
+              <div><span aria-hidden="true">♡</span><p><strong>A tu manera</strong><small>Presupuesto para tu viaje</small></p></div>
+            </div>
+            <article class="trip-preview" aria-live="polite">
+              <div class="trip-preview-image">
+                <img data-trip-preview-image src="" alt="" hidden loading="lazy" decoding="async">
+                <span class="trip-preview-flag" data-trip-preview-flag aria-hidden="true">✈</span>
+                <span class="trip-preview-tag">TU PRÓXIMA AVENTURA</span>
+                <span class="trip-preview-dates" data-trip-preview-days>4 días</span>
+              </div>
+              <div class="trip-preview-copy">
+                <p>VIAJE EN PREPARACIÓN</p>
+                <h3 data-trip-preview-name>Mi próxima aventura</h3>
+                <span data-trip-preview-destination>Elige un destino para comenzar</span>
+              </div>
+            </article>
+          </div>
+          <form action="error-fechas.html" class="planner-form" id="trip-planner-form">
+            <div class="form-title">
+              <div>
+                <p class="eyebrow">TU PLAN, PASO A PASO</p>
+                <h3>Diseña tu itinerario</h3>
+                <p class="muted">Completa los detalles y deja que empiece la aventura.</p>
+              </div>
+              <span class="form-icon" aria-hidden="true">✦</span>
+            </div>
+            <nav class="planner-steps" aria-label="Progreso de creación del itinerario">
+              <span class="planner-step-track" aria-hidden="true"><span data-planner-progress></span></span>
+              <span class="sr-only" data-planner-progress-label role="progressbar" aria-label="Progreso del formulario" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1">Paso 1 de 4: Destino</span>
+              <button class="planner-step is-active" type="button" data-planner-step="0" aria-current="step"><span class="planner-step-number">01</span><span class="planner-step-label">Destino</span></button>
+              <button class="planner-step" type="button" data-planner-step="1" disabled><span class="planner-step-number">02</span><span class="planner-step-label">Fechas</span></button>
+              <button class="planner-step" type="button" data-planner-step="2" disabled><span class="planner-step-number">03</span><span class="planner-step-label">Presupuesto</span></button>
+              <button class="planner-step" type="button" data-planner-step="3" disabled><span class="planner-step-number">04</span><span class="planner-step-label">Notas</span></button>
+            </nav>
+            <p class="sr-only" data-planner-step-status role="status" aria-live="polite"></p>
+            <div class="planner-fields">
+              <section class="planner-field-group" id="trip-destination" data-planner-step-content="0" aria-labelledby="trip-destination-title">
+                <h4 id="trip-destination-title"><span>01</span> ¿A dónde vamos?</h4>
+                <label for="trip-name">Ponle nombre a tu viaje</label>
+                <input id="trip-name" name="tripName" placeholder="Ej. Aventuras en Colombia" type="text" maxlength="60" required>
+                <label for="trip-destination-select">Destino</label>
+                <select id="trip-destination-select" name="destination" required><option value="">Cargando países…</option></select>
+              </section>
+              <section class="planner-field-group" id="trip-dates" data-planner-step-content="1" aria-labelledby="trip-dates-title" hidden>
+                <h4 id="trip-dates-title"><span>02</span> ¿Cuándo viajamos?</h4>
+                <div class="form-two">
+                  <label for="trip-start">Fecha de inicio<input id="trip-start" name="start" type="date" required></label>
+                  <label for="trip-end">Fecha de finalización<input id="trip-end" name="end" type="date" required></label>
+                </div>
+              </section>
+              <section class="planner-field-group" id="trip-budget" data-planner-step-content="2" aria-labelledby="trip-budget-title" hidden>
+                <h4 id="trip-budget-title"><span>03</span> Prepara tu presupuesto</h4>
+                <div class="form-two">
+                  <label for="trip-travelers">Viajeros<input id="trip-travelers" name="travelers" min="1" max="30" type="number" value="2" required></label>
+                  <label for="trip-budget-input">Presupuesto estimado · <span data-budget-currency>peso colombiano (COP)</span><input id="trip-budget-input" name="budget" min="0" step="1" type="number" value="2500000" required></label>
+                </div>
+                <p class="form-footnote">El importe inicial está en pesos colombianos (COP) y se convierte a la moneda del destino al elegir un país. La tasa es informativa y puede variar.</p>
+                <p class="form-footnote" data-budget-rate-status role="status" aria-live="polite"></p>
+              </section>
+              <section class="planner-field-group" id="trip-comments" data-planner-step-content="3" aria-labelledby="trip-comments-title" hidden>
+                <h4 id="trip-comments-title"><span>04</span> Añade tus notas</h4>
+                <label for="trip-comments-input">Comentarios para recordar detalles, ideas o necesidades especiales</label>
+                <textarea id="trip-comments-input" name="comments" rows="4" maxlength="500" placeholder="Ej. Preferimos alojarnos cerca del centro y reservar una visita guiada."></textarea>
+                <p class="form-footnote">Opcional · Hasta 500 caracteres.</p>
+              </section>
+            </div>
+            <div class="planner-submit">
+              <p class="budget-summary" data-budget-summary data-planner-step-only="2" aria-live="polite" hidden></p>
+              <div class="planner-step-controls">
+                <button class="btn btn-outline" type="button" data-planner-back disabled>← Anterior</button>
+                <button class="btn btn-primary btn-wide" type="button" data-planner-next>Siguiente <span aria-hidden="true">→</span></button>
+                <button class="btn btn-primary btn-wide" type="submit" data-planner-submit hidden>Crear mi itinerario <span aria-hidden="true">→</span></button>
+              </div>
+              <p class="form-footnote" data-planner-step-only="3" hidden><span aria-hidden="true">✦</span> Luego podrás organizar tus actividades día a día.</p>
+            </div>
+          </form>
+          <div class="planner-success" data-trip-success role="status" aria-live="polite" hidden>
+            <div class="planner-success-card">
+              <span aria-hidden="true">✓</span>
+              <h2 data-trip-success-title tabindex="-1">¡Creaste tu itinerario con éxito!</h2>
+              <p>En un momento volverás a la pantalla principal de itinerarios.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-wrap footer-inner">
+        <a class="brand brand-light" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+        <p>Explora. Planifica. Vive la aventura.</p>
+        <a href="../index.html">Volver al inicio ↑</a>
+        <a href="privacidad.html">Privacidad y datos</a>
+        <small>© 2026 AVENTRA · Proyecto académico</small>
+      </div>
+    </footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

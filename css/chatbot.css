@@ -1,0 +1,283 @@
+.travel-assistant {
+  position: fixed;
+  z-index: 45;
+  right: 20px;
+  bottom: 20px;
+  font-family: 'DM Sans', Aptos, sans-serif;
+}
+
+.travel-assistant-toggle {
+  display: inline-flex;
+  min-width: 62px;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--teal);
+  color: #fff;
+  box-shadow: 0 8px 26px rgba(20, 38, 48, .24);
+  cursor: pointer;
+  font: 800 12px 'DM Sans', sans-serif;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.travel-assistant-toggle:hover {
+  transform: translateY(-2px);
+  background: #238e93;
+}
+
+.travel-assistant-toggle>span:first-child {
+  font-size: 20px;
+}
+
+.travel-assistant-panel {
+  position: absolute;
+  right: 0;
+  bottom: 70px;
+  display: flex;
+  width: min(370px, calc(100vw - 32px));
+  height: min(540px, calc(100dvh - 120px));
+  min-height: 350px;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #dfe7e4;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 18px 55px rgba(20, 38, 48, .22);
+}
+
+.travel-assistant-panel[hidden] {
+  display: none;
+}
+
+.travel-assistant-header {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 15px;
+  background: #142630;
+  color: #fff;
+}
+
+.travel-assistant-header>div {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.travel-assistant-mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(42, 164, 169, .2);
+  color: #69d6d1;
+  font-size: 20px;
+}
+
+.travel-assistant-header h2 {
+  margin: 0;
+  font: 800 13px Manrope, sans-serif;
+}
+
+.travel-assistant-header p {
+  margin: 3px 0 0;
+  color: #c3d0d2;
+  font-size: 10px;
+}
+
+.travel-assistant-close {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font: 400 26px/1 'DM Sans', sans-serif;
+}
+
+.travel-assistant-close:hover,
+.travel-assistant-close:focus-visible {
+  background: rgba(255, 255, 255, .13);
+}
+
+.travel-assistant-messages {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  padding: 14px;
+  background: #f7faf9;
+  overscroll-behavior: contain;
+}
+
+.travel-assistant-message {
+  max-width: 90%;
+  padding: 10px 12px;
+  border: 1px solid #e4ece8;
+  border-radius: 13px 13px 13px 4px;
+  background: #fff;
+  color: #40535a;
+  font-size: 12px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.travel-assistant-message.is-user {
+  align-self: flex-end;
+  border-color: #b6e2de;
+  border-radius: 13px 13px 4px 13px;
+  background: #e7f6f4;
+  color: #173c41;
+}
+
+.travel-assistant-message p {
+  margin: 0;
+}
+
+.travel-assistant-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 9px;
+}
+
+.travel-assistant-action {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 6px 9px;
+  border: 1px solid #b6dcd7;
+  border-radius: 8px;
+  color: #176f71;
+  font-size: 10px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.travel-assistant-action:hover,
+.travel-assistant-action:focus-visible {
+  background: #eaf8f6;
+}
+
+.travel-assistant-suggestions {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  padding: 10px 12px 4px;
+  scrollbar-width: thin;
+}
+
+.travel-assistant-suggestion {
+  min-height: 34px;
+  flex: 0 0 auto;
+  padding: 6px 9px;
+  border: 1px solid #d6e5e1;
+  border-radius: 999px;
+  background: #fff;
+  color: #40535a;
+  cursor: pointer;
+  font: 700 10px 'DM Sans', sans-serif;
+}
+
+.travel-assistant-suggestion:hover,
+.travel-assistant-suggestion:focus-visible {
+  border-color: var(--teal);
+  color: #176f71;
+}
+
+.travel-assistant-form {
+  display: flex;
+  gap: 8px;
+  padding: 9px 12px 10px;
+}
+
+.travel-assistant-form input {
+  width: 0;
+  min-width: 0;
+  min-height: 42px;
+  flex: 1;
+  padding: 9px 12px;
+  border: 1px solid #d9e3df;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--navy);
+  font: 12px 'DM Sans', sans-serif;
+}
+
+.travel-assistant-form input:focus {
+  border-color: var(--teal);
+  outline: 3px solid rgba(42, 164, 169, .14);
+}
+
+.travel-assistant-form button {
+  min-width: 62px;
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--teal);
+  color: #fff;
+  cursor: pointer;
+  font: 800 11px 'DM Sans', sans-serif;
+}
+
+.travel-assistant-form button:hover {
+  background: #238e93;
+}
+
+.travel-assistant-privacy {
+  margin: 0;
+  padding: 0 12px 10px;
+  color: #738187;
+  font-size: 9px;
+  text-align: center;
+}
+
+.travel-assistant-toggle:focus-visible,
+.travel-assistant-action:focus-visible,
+.travel-assistant-suggestion:focus-visible,
+.travel-assistant-form button:focus-visible {
+  outline: 3px solid rgba(42, 164, 169, .55);
+  outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+  .travel-assistant {
+    right: 14px;
+    bottom: calc(82px + env(safe-area-inset-bottom));
+  }
+
+  .travel-assistant-panel {
+    bottom: 66px;
+    width: min(370px, calc(100vw - 28px));
+    height: min(540px, calc(100dvh - 190px));
+    min-height: 300px;
+  }
+
+  .travel-assistant-toggle {
+    min-width: 52px;
+    min-height: 52px;
+    padding-inline: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travel-assistant-toggle {
+    transition: none;
+  }
+}

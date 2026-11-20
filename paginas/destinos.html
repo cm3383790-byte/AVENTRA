@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora pa&#237;ses y lugares destacados, filtra destinos y encuentra inspiraci&#243;n para tu pr&#243;xima aventura.">
+    <meta name="theme-color" content="#142630">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="AVENTRA">
+    <meta property="og:title" content="Destinos | AVENTRA">
+    <meta property="og:description" content="Explora pa&#237;ses y lugares destacados, filtra destinos y encuentra inspiraci&#243;n para tu pr&#243;xima aventura.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Destinos | AVENTRA">
+    <meta name="twitter:description" content="Explora pa&#237;ses y lugares destacados, filtra destinos y encuentra inspiraci&#243;n para tu pr&#243;xima aventura.">
+    <link rel="icon" type="image/png" href="../img/logo/media_2.png">
+    <title>Destinos | AVENTRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+      <input class="mobile-menu-toggle" id="menu-movil" type="checkbox" aria-label="Mostrar menú de navegación">
+      <label class="mobile-menu-button" for="menu-movil" aria-controls="main-nav mobile-account"><span aria-hidden="true">☰</span><span>Menú</span></label>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="../index.html">Inicio</a>
+        <a href="destinos.html" class="active">Destinos</a>
+        <a href="favoritos.html">Favoritos</a>
+        <a href="itinerario.html">Itinerario</a>
+        <a href="acerca.html">Acerca de</a>
+      </nav>
+      <a id="mobile-account" class="account-link" href="login.html"><span class="account-icon" aria-hidden="true">◉</span> Cuenta</a>
+    </header>
+    <main id="contenido-principal">
+      <div class="section-wrap destinations-page">
+        <section class="destinations-banner" aria-labelledby="destination-hero-title">
+          <div class="destinations-banner-media">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Taj_Mahal%2C_Agra%2C_India.jpg/1920px-Taj_Mahal%2C_Agra%2C_India.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="El Taj Mahal, uno de los lugares emblemáticos para descubrir en el mundo" fetchpriority="high" loading="eager" decoding="async">
+          </div>
+          <div class="destinations-banner-content">
+            <p class="eyebrow">AVENTRA · DESCUBRE EL MUNDO</p>
+            <h1 id="destination-hero-title">NUESTROS DESTINOS</h1>
+            <p>Elige tu próximo destino y empieza a imaginar tu aventura.</p>
+            <span class="destinations-banner-count"><strong data-featured-count>32</strong> lugares para descubrir</span>
+          </div>
+          <a class="destination-hero-credit" href="https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra,_India.jpg" target="_blank" rel="noopener noreferrer" title="Foto: Yann · Licencia CC BY-SA 4.0">Taj Mahal · Foto: Yann · CC BY-SA 4.0 ↗</a>
+        </section>
+      </div>
+      <section class="search-section" id="buscar-destinos">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">ENCUENTRA TU PRÓXIMA AVENTURA</p>
+              <h2>¿A dónde quieres ir?</h2>
+              <p class="muted">Explora países, ciudades y sus lugares más emblemáticos.</p>
+            </div>
+          </div>
+          <form action="destinos.html" class="filter-bar">
+            <label class="search-field"><span aria-hidden="true">⌕</span><input aria-label="Buscar país, ciudad o experiencia" name="q" placeholder="Buscar un país, ciudad o experiencia..." type="search"/></label>
+            <label class="select-field"><span class="sr-only">Región</span><select name="region"><option value="">Todas las regiones</option></select></label>
+            <label class="select-field"><span class="sr-only">Experiencia</span><select name="experience"><option value="">Cualquier experiencia</option><option value="Naturaleza">Naturaleza</option><option value="Cultura">Cultura</option><option value="Playas">Playas y relax</option><option value="Ciudades">Ciudades</option></select></label>
+            <details class="destination-advanced-filters">
+              <summary>Más filtros</summary>
+              <div class="destination-advanced-fields">
+                <label class="select-field"><span class="sr-only">Actividad</span><select name="activity"><option value="">Cualquier actividad</option><option value="naturaleza">Aventura al aire libre</option><option value="cultura">Historia y cultura</option><option value="playas">Playa y descanso</option><option value="ciudades">Recorridos urbanos</option><option value="gastronomia">Gastronomía</option></select></label>
+                <label class="select-field"><span class="sr-only">Clima orientativo</span><select name="climate"><option value="">Cualquier clima</option><option value="Tropical">Cálido / tropical</option><option value="Templado">Templado</option><option value="Frío">Frío</option><option value="Variado">Variado</option></select></label>
+              </div>
+              <small>El clima es una referencia general; consulta el pronóstico antes de viajar.</small>
+            </details>
+            <button class="btn btn-primary" type="submit">Buscar</button>
+          </form>
+          <p class="filter-note muted">Mostramos destinos reconocidos y recomendaciones según su información disponible de región, clima y experiencias.</p>
+          <p class="destination-status muted" data-destination-status role="status" hidden>Cargando países…</p>
+          <div class="destination-browser-layout">
+            <div class="destination-results">
+              <div class="small-destination-grid" id="lista-destinos" aria-live="polite"></div>
+              <div class="destination-pagination">
+                <p class="destination-results-count muted" data-destination-results role="status"></p>
+                <button class="btn btn-outline" id="cargar-mas-destinos" type="button">Ver 6 países más</button>
+              </div>
+            </div>
+            <aside class="destination-sidebar" aria-labelledby="destination-sidebar-title">
+              <h2 id="destination-sidebar-title">DESTINOS DESTACADOS</h2>
+              <div class="destination-sidebar-list" id="destinos-destacados"></div>
+            </aside>
+          </div>
+          <div class="empty-state" hidden>
+            <span class="empty-icon">⌕</span>
+            <h3>¿No encontramos destinos?</h3>
+            <p>Prueba con otro nombre o elimina algún filtro.</p>
+            <a class="btn btn-outline" href="destinos.html">Limpiar filtros</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-wrap footer-inner">
+        <a class="brand brand-light" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+        <p>Explora. Planifica. Vive la aventura.</p>
+        <a href="../index.html">Volver al inicio ↑</a>
+        <a href="privacidad.html">Privacidad y datos</a>
+        <small>© 2026 AVENTRA · Proyecto académico</small>
+      </div>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="Volver arriba" title="Volver arriba" hidden>↑</button>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

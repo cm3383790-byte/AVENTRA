@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce qué datos guarda AVENTRA en tu dispositivo, qué servicios externos consulta y cómo gestionar tu información.">
+    <meta name="theme-color" content="#142630">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="AVENTRA">
+    <meta property="og:title" content="Privacidad y uso de datos | AVENTRA">
+    <meta property="og:description" content="Conoce qué datos guarda AVENTRA en tu dispositivo, qué servicios externos consulta y cómo gestionar tu información.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Privacidad y uso de datos | AVENTRA">
+    <meta name="twitter:description" content="Conoce qué datos guarda AVENTRA en tu dispositivo, qué servicios externos consulta y cómo gestionar tu información.">
+    <title>Privacidad y uso de datos | AVENTRA</title>
+    <link rel="icon" type="image/png" href="../img/logo/media_2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="AVENTRA, inicio"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA"></a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="../index.html">Inicio</a>
+        <a href="destinos.html">Destinos</a>
+        <a href="itinerario.html">Itinerario</a>
+        <a href="acerca.html">Acerca de</a>
+      </nav>
+    </header>
+    <main id="contenido-principal" class="section-wrap legal-page">
+      <p class="eyebrow">TRANSPARENCIA</p>
+      <h1>Privacidad y uso de datos</h1>
+      <p class="muted">AVENTRA es una aplicación web estática de planificación de viajes. No necesitas crear una cuenta para usar sus herramientas.</p>
+
+      <h2>Datos guardados en tu dispositivo</h2>
+      <p>Los destinos favoritos, itinerarios, actividades y listas para empacar se guardan en el almacenamiento local (localStorage) de este navegador y para este sitio. Si buscas alojamientos, la ciudad o zona consultada también queda guardada dentro del itinerario en este dispositivo. La aplicación guarda la fecha en que aceptas los términos de uso (<code>aventra.terms.acceptance.v1</code>). Otras claves incluyen <code>aventra.favorites</code>, <code>aventra.trip</code>, <code>aventra.trips.v1</code> y <code>aventra.packing</code>. También se guardan datos en caché para destinos, imágenes de países y lugares (<code>aventra.destinations.v16</code>, <code>aventra.country-images.v9</code> y <code>aventra.country-highlights.v13</code>). No se envían a una cuenta ni se sincronizan con otros dispositivos. Si borras los datos del navegador, cambias de navegador o dispositivo, puedes perderlos. Usa la opción de copia de seguridad de itinerarios para exportarlos e importarlos manualmente.</p>
+      <p>Puedes borrar el almacenamiento del sitio desde los ajustes del navegador. La conversión de moneda y el pronóstico consultan servicios en línea y necesitan conexión.</p>
+
+      <h2>Servicios externos</h2>
+      <ul>
+        <li><strong>Google Fonts:</strong> carga las tipografías de la interfaz desde Google Fonts.</li>
+        <li><strong>jsDelivr:</strong> entrega el catálogo público de países usado para mostrar destinos.</li>
+        <li><strong>Wikimedia Commons:</strong> se consultan imágenes e información de lugares y sus créditos. Al cargarlas, tu navegador se conecta a Wikimedia.</li>
+        <li><strong>Flagcdn:</strong> proporciona imágenes de banderas para algunos destinos.</li>
+        <li><strong>Open-Meteo:</strong> recibe la ciudad que consultas para buscar coordenadas y mostrar el pronóstico.</li>
+        <li><strong>Photon y Nominatim (OpenStreetMap):</strong> al buscar alojamientos, Photon recibe la ciudad o zona para ubicarla y Nominatim consulta alojamientos en el área aproximada. AVENTRA no envía el nombre, las fechas ni el presupuesto del viaje a esos servicios.</li>
+        <li><strong>ExchangeRate-API:</strong> proporciona tasas de cambio para la conversión informativa de monedas. No es una cotización garantizada.</li>
+        <li><strong>Google Maps:</strong> los enlaces de mapas abren búsquedas de lugares, rutas o alojamientos; al abrir una ficha de alojamiento, el enlace puede incluir su nombre y la ciudad para consultar calificaciones y reseñas en Google Maps.</li>
+      </ul>
+      <p>Al solicitar recursos a esos proveedores, tu navegador comunica la información técnica habitual de una conexión web (por ejemplo, dirección IP y datos del navegador). Los proveedores aplican sus propias políticas de privacidad y disponibilidad. AVENTRA no controla sus prácticas ni garantiza que sus servicios estén disponibles.</p>
+
+      <h2>Cuentas y analítica</h2>
+      <p>Actualmente, el acceso y registro son solo informativos: no se crean cuentas ni se envían credenciales. AVENTRA no incorpora una plataforma de analítica ni un servicio propio de seguimiento.</p>
+
+      <h2>Tus opciones</h2>
+      <p>Puedes borrar favoritos, viajes y listas desde la aplicación cuando la opción esté disponible, exportar o importar una copia de los itinerarios, o eliminar los datos del sitio desde tu navegador. Una copia exportada queda bajo tu control; guárdala en un lugar seguro.</p>
+      <p>Esta información describe el funcionamiento actual de la aplicación y puede actualizarse si cambian sus funciones o proveedores.</p>
+      <div class="terms-acceptance" data-terms-acceptance>
+        <span class="terms-acceptance-end" data-terms-acceptance-end aria-hidden="true"></span>
+        <button class="btn btn-primary terms-accept-button" type="button" data-terms-accept-button hidden>Aceptar los términos de uso</button>
+        <p class="terms-acceptance-status" data-terms-acceptance-status role="status" aria-live="polite" hidden></p>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="section-wrap footer-inner">
+        <a class="brand brand-light" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA"></a>
+        <p>Explora. Planifica. Vive la aventura.</p>
+        <a href="../index.html">Volver al inicio ↑</a>
+        <a href="privacidad.html" aria-current="page">Privacidad y datos</a>
+        <small>© 2026 AVENTRA · Proyecto académico</small>
+      </div>
+    </footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

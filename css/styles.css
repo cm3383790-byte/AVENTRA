@@ -1,0 +1,8 @@
+/* Archivo principal: mantiene el orden de carga y la cascada del proyecto. */
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');
+@import url('pages.css');
+@import url('responsive.css');
+@import url('auth.css');
+@import url('chatbot.css');

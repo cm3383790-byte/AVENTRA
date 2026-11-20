@@ -1,0 +1,930 @@
+/* COMPONENTS: estilos organizados por función */
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--teal);
+  margin: 0 0 12px;
+}
+
+.eyebrow-line {
+  display: inline-block;
+  width: 26px;
+  height: 2px;
+  background: var(--teal);
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 7px;
+  max-width: 530px;
+  box-shadow: 0 12px 35px rgba(20, 38, 48, .06);
+}
+
+.search-icon {
+  font-size: 27px;
+  color: var(--teal);
+  padding: 0 8px;
+}
+
+.search-bar input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.home-search-form {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 510px;
+}
+
+.home-search-form .search-bar {
+  max-width: none;
+}
+
+.home-search-input-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.home-search-input-wrap input {
+  width: 100%;
+}
+
+.home-search-suggestions {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 10px);
+  right: 0;
+  left: 0;
+  max-height: 310px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 7px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 16px 35px rgba(8, 24, 31, .24);
+  color: var(--navy);
+  list-style: none;
+}
+
+.home-search-suggestion-heading,
+.home-search-suggestion-empty {
+  padding: 8px 10px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.home-search-suggestion-heading {
+  font-weight: 700;
+}
+
+.home-search-suggestions a {
+  display: grid;
+  gap: 3px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.home-search-suggestions a:hover,
+.home-search-suggestions a:focus-visible {
+  outline: 0;
+  background: #eaf6f3;
+}
+
+.home-search-suggestions a strong {
+  font-size: 12px;
+}
+
+.home-search-suggestions a span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* BOTONES */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--teal);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--navy);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(20, 38, 48, .2);
+}
+
+.btn-light {
+  background: #fff;
+  color: var(--navy);
+}
+
+.btn-light:hover {
+  background: var(--cyan);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: #cbd9d6;
+  color: var(--navy);
+}
+
+.btn-outline:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(42, 164, 169, .18);
+}
+
+.btn-wide {
+  width: 100%;
+}
+
+.art-label {
+  position: absolute;
+  left: 26px;
+  bottom: 26px;
+  z-index: 3;
+  background: white;
+  border-radius: 12px;
+  padding: 13px 17px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* ICONOS Y DETALLES */
+
+.pin {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #e5f5f1;
+  color: var(--teal);
+  font-size: 24px;
+}
+
+.art-label strong,.art-label small {
+  display: block;
+}
+
+.art-label strong {
+  font-size: 12px;
+}
+
+.art-label small {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.floating-stamp {
+  position: absolute;
+  z-index: 3;
+  right: 25px;
+  bottom: 45px;
+  border: 1px solid rgba(255, 255, 255, .8);
+  border-radius: 50%;
+  width: 95px;
+  height: 95px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: white;
+  transform: rotate(12deg);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ENLACES DE ACCIÓN */
+
+.text-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--teal);
+}
+
+.text-link span {
+  padding-left: 8px;
+}
+
+.text-link:hover {
+  color: var(--navy);
+}
+
+/* TARJETAS DE DESTINO */
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.destination-card {
+  height: 330px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  background-color: #9acdc5;
+  color: white;
+  box-shadow: var(--shadow);
+  transition: transform .28s ease, box-shadow .28s ease, background-size .7s ease;
+}
+
+.destination-card:hover,
+.destination-card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 34px rgba(20, 38, 48, .18);
+  background-size: auto 110%;
+}
+
+.destination-card:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 38, 48, .05), rgba(20, 38, 48, .1) 35%, rgba(20, 38, 48, .88));
+}
+
+.card-colombia {
+  background-image: url("../img/imaginicio/colombiainicio.png");
+  background-position: center;
+}
+
+.card-spain {
+  background-image: url("../img/imaginicio/espa%C3%B1ainicio.png");
+  background-position: center;
+}
+
+.card-japan {
+  background-image: url("../img/imaginicio/japoninicio.png");
+  background-position: center;
+}
+
+.card-tag {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  border: 1px solid rgba(255, 255, 255, .65);
+  border-radius: 5px;
+  padding: 5px 9px;
+  font-size: 9px;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+}
+
+.destination-card-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 22px;
+  right: 22px;
+}
+
+.destination-card h3 {
+  font-family: Manrope, sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  margin: 0 0 7px;
+}
+
+.destination-card p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, .82);
+  margin: 0 0 17px;
+}
+
+.destination-card .btn {
+  padding: 10px 13px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+/* BUSCADORES Y FILTROS */
+
+.search-field,.select-field {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 14px;
+  min-height: 48px;
+}
+
+.search-field {
+  flex: 1;
+  gap: 10px;
+}
+
+.search-field span {
+  font-size: 23px;
+  color: var(--teal);
+}
+
+.search-field input,.select-field select {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  width: 100%;
+  color: var(--navy);
+}
+
+.select-field {
+  width: 170px;
+}
+
+.small-destination-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* TARJETAS COMPACTAS */
+
+.mini-card {
+  background: #fff;
+  border: 1px solid #e9efec;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+}
+
+.mini-art {
+  width: 74px;
+  height: 78px;
+  flex: 0 0 74px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.mini-art-flag {
+  overflow: hidden;
+  background: #f3f6f5;
+}
+
+.mini-art-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.country-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.country-card:hover,
+.country-card:focus-within {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.country-card-image {
+  position: relative;
+  width: 100%;
+  height: 155px;
+  flex: 0 0 155px;
+  overflow: hidden;
+  border-radius: 0;
+  background: linear-gradient(145deg, #dce9e6, #8ab8b0);
+}
+
+.photo-credit {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  z-index: 2;
+  max-width: calc(100% - 16px);
+  overflow: hidden;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: rgba(20, 38, 48, .72);
+  color: #fff;
+  font-size: 9px;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.photo-credit:hover,
+.photo-credit:focus-visible {
+  background: var(--navy);
+  color: #fff;
+  text-decoration: underline;
+}
+
+.country-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.country-image-fallback {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  background: linear-gradient(145deg, #e5efec, #9dc6bd);
+  font-size: 52px;
+  line-height: 1;
+}
+
+.favorite-item .country-image-fallback {
+  font-size: 30px;
+}
+
+.country-card:hover .country-card-image img,
+.country-card:focus-within .country-card-image img {
+  transform: scale(1.05);
+}
+
+.country-card .mini-content {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px 15px;
+}
+
+.country-card .mini-content h3 {
+  min-height: 34px;
+}
+
+.country-card .favorite-toggle {
+  margin-top: 7px;
+}
+
+.mini-art-emoji {
+  font-size: 34px;
+  letter-spacing: 0;
+  text-shadow: none;
+}
+
+.destination-status {
+  min-height: 18px;
+  margin: 0 0 14px;
+  font-size: 12px;
+}
+
+.art-spain {
+  background: linear-gradient(140deg, #d84d3f, #efc66f);
+}
+
+.art-colombia {
+  background: linear-gradient(140deg, #f3cb4c 0 35%, #287cbd 35% 67%, #c83d36 67%);
+}
+
+.art-japan {
+  background: radial-gradient(circle, #d85d64 0 16%, #f9f2e9 17% 100%);
+}
+
+.art-canada {
+  background: linear-gradient(90deg, #d9484b, #fff 35% 65%, #d9484b);
+}
+
+.art-italy {
+  background: linear-gradient(90deg, #37946e 0 33%, #fff 33% 66%, #d95151 66%);
+}
+
+.mini-art[class*="mini-photo-"] {
+  background-position: center;
+  background-size: cover;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .7);
+  transition: transform .28s ease, background-size .35s ease;
+}
+
+.mini-card:hover .mini-art[class*="mini-photo-"],
+.mini-card:focus-within .mini-art[class*="mini-photo-"],
+.favorite-item:hover .mini-art[class*="mini-photo-"],
+.favorite-item:focus-within .mini-art[class*="mini-photo-"] {
+  transform: scale(1.08);
+  background-size: auto 112%;
+}
+
+.mini-art.mini-photo-argentina {
+  background-image: linear-gradient(rgba(20, 38, 48, .22), rgba(20, 38, 48, .22)), url("../img/paises/argentina.png");
+}
+
+.mini-art.mini-photo-brasil {
+  background-image: linear-gradient(rgba(20, 38, 48, .22), rgba(20, 38, 48, .22)), url("../img/paises/brasil.png");
+}
+
+.mini-art.mini-photo-canada {
+  background-image: linear-gradient(rgba(20, 38, 48, .22), rgba(20, 38, 48, .22)), url("../img/paises/canada.png");
+}
+
+.mini-art.mini-photo-colombia {
+  background-image: linear-gradient(rgba(20, 38, 48, .22), rgba(20, 38, 48, .22)), url("../img/paises/colombia.png");
+}
+
+.mini-art.mini-photo-espana {
+  background-image: linear-gradient(rgba(20, 38, 48, .22), rgba(20, 38, 48, .22)), url("../img/paises/espa%C3%B1a.png");
+}
+
+.mini-art.mini-photo-francia {
+  background-image: linear-gradient(rgba(20, 38, 48, .22), rgba(20, 38, 48, .22)), url("../img/paises/francia.png");
+}
+
+.mini-art.mini-photo-guatemala {
+  background-image: linear-gradient(rgba(20, 38, 48, .22), rgba(20, 38, 48, .22)), url("../img/paises/guatemala.png");
+}
+
+.mini-art.mini-photo-italia {
+  background-image: linear-gradient(rgba(20, 38, 48, .22), rgba(20, 38, 48, .22)), url("../img/paises/italia-opt.jpg");
+}
+
+.mini-art.mini-photo-japon {
+  background-image: linear-gradient(rgba(20, 38, 48, .22), rgba(20, 38, 48, .22)), url("../img/paises/japon.jpg");
+}
+
+.mini-art.mini-photo-mexico {
+  background-image: linear-gradient(rgba(20, 38, 48, .22), rgba(20, 38, 48, .22)), url("../img/paises/mexico.png");
+}
+
+.mini-art.mini-photo-peru {
+  background-image: linear-gradient(rgba(20, 38, 48, .22), rgba(20, 38, 48, .22)), url("../img/paises/peru.png");
+}
+
+.mini-content h3,.favorite-item h3 {
+  font-size: 14px;
+  margin: 0 0 3px;
+}
+
+.mini-content p,.favorite-item p {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.mini-content .text-link {
+  font-size: 10px;
+}
+
+/* ESTADOS VACÍOS */
+
+.empty-state {
+  text-align: center;
+  padding: 42px 20px 5px;
+  color: var(--muted);
+}
+
+.empty-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e5f5f1;
+  color: var(--teal);
+  font-size: 27px;
+  margin: 0 auto 10px;
+  transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+}
+
+.empty-icon:hover,
+.empty-icon:focus-visible {
+  transform: rotate(-8deg) scale(1.08);
+  box-shadow: 0 8px 20px rgba(42, 164, 169, .2);
+}
+
+.empty-state h3 {
+  color: var(--navy);
+  margin: 0;
+  font-size: 17px;
+}
+
+.empty-state p {
+  margin: 5px 0 16px;
+  font-size: 13px;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0 18px;
+}
+
+/* TARJETA DEL CLIMA */
+
+.weather-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 32px;
+  box-shadow: var(--shadow);
+}
+
+.weather-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-top p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.temperature {
+  font: 800 55px/1.2 Manrope, sans-serif;
+  letter-spacing: -2px;
+}
+
+.temperature span {
+  font-size: 27px;
+  vertical-align: top;
+}
+
+.weather-top strong {
+  font-size: 13px;
+}
+
+.weather-sun {
+  font-size: 74px;
+  color: #efbb59;
+}
+
+.forecast-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 22px 0 10px;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.forecast div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 6px;
+}
+
+.forecast div+div {
+  border-left: 1px solid var(--line);
+}
+
+.forecast span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.forecast b {
+  font-size: 24px;
+  color: #eab34d;
+}
+
+.forecast strong {
+  font-size: 12px;
+}
+
+.rain-note {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 13px 0 0;
+}
+
+.rain-note strong {
+  color: var(--navy);
+}
+
+/* INDICADORES */
+
+.count-pill {
+  background: #e4f5f1;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 13px;
+  border-radius: 30px;
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 13px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .destination-card,
+  .mini-art[class*="mini-photo-"] {
+    transition: box-shadow .18s ease, filter .18s ease;
+  }
+
+  .destination-card:hover,
+  .destination-card:focus-within,
+  .mini-card:hover .mini-art[class*="mini-photo-"],
+  .mini-card:focus-within .mini-art[class*="mini-photo-"],
+  .favorite-item:hover .mini-art[class*="mini-photo-"],
+  .favorite-item:focus-within .mini-art[class*="mini-photo-"] {
+    transform: none;
+    background-size: cover;
+  }
+
+  .destination-card:hover,
+  .destination-card:focus-within {
+    background-size: cover;
+  }
+
+  .mini-card:hover .mini-art[class*="mini-photo-"],
+  .mini-card:focus-within .mini-art[class*="mini-photo-"],
+  .favorite-item:hover .mini-art[class*="mini-photo-"],
+  .favorite-item:focus-within .mini-art[class*="mini-photo-"] {
+    filter: brightness(1.08);
+  }
+
+  .btn-primary:hover,
+  .btn-outline:hover,
+  .empty-icon:hover,
+  .empty-icon:focus-visible {
+    transform: none;
+    box-shadow: 0 0 0 4px rgba(42, 164, 169, .2);
+    filter: brightness(1.08);
+  }
+}
+
+.favorite-item .mini-art {
+  position: relative;
+  width: 68px;
+  height: 66px;
+  flex-basis: 68px;
+}
+
+.favorite-item>div:nth-child(2) {
+  flex: 1;
+}
+
+.favorite-item .text-link {
+  font-size: 11px;
+}
+
+/* ELEMENTOS DE FORMULARIO */
+
+.form-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.form-title h3 {
+  font: 800 22px Manrope, sans-serif;
+  margin: 0;
+}
+
+.form-title p {
+  font-size: 12px;
+  margin: 5px 0 0;
+}
+
+.form-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: #e4f5f1;
+  color: var(--teal);
+  border-radius: 11px;
+  font-size: 23px;
+}
+
+.form-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-footnote {
+  text-align: center;
+  font-size: 10px;
+  color: var(--muted);
+  margin: 13px 0 0;
+}
+
+/* ELEMENTOS DEL ITINERARIO */
+
+.day-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.day-list article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.day-number {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--teal);
+  font-weight: 800;
+}
+
+.day-list h3 {
+  font-size: 15px;
+  margin: 0 0 4px;
+}
+
+.day-list p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.day-arrow {
+  align-self: flex-end;
+  color: var(--teal);
+}
+
+.form-switch {
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 16px;
+}
+
+.form-switch a {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.form-divider {
+  width: 1px;
+  background: var(--line);
+  display: none;
+}

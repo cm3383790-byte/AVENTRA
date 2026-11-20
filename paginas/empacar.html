@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prepara tu equipaje con una lista personal para marcar lo que necesitas llevar en tu viaje.">
+    <meta name="theme-color" content="#142630">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="AVENTRA">
+    <meta property="og:title" content="Lista para empacar | AVENTRA">
+    <meta property="og:description" content="Prepara tu equipaje con una lista personal para marcar lo que necesitas llevar en tu viaje.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Lista para empacar | AVENTRA">
+    <meta name="twitter:description" content="Prepara tu equipaje con una lista personal para marcar lo que necesitas llevar en tu viaje.">
+    <link rel="icon" type="image/png" href="../img/logo/media_2.png">
+    <title>Lista para empacar | AVENTRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+      <input class="mobile-menu-toggle" id="menu-movil" type="checkbox" aria-label="Mostrar menú de navegación">
+      <label class="mobile-menu-button" for="menu-movil" aria-controls="main-nav mobile-account"><span aria-hidden="true">☰</span><span>Menú</span></label>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="../index.html">Inicio</a>
+        <a href="destinos.html">Destinos</a>
+        <a href="favoritos.html">Favoritos</a>
+        <a href="itinerario.html" class="active">Itinerario</a>
+        <a href="acerca.html">Acerca de</a>
+      </nav>
+      <a id="mobile-account" class="account-link" href="login.html"><span class="account-icon" aria-hidden="true">◉</span> Cuenta</a>
+    </header>
+    <main id="contenido-principal">
+      <section class="section-wrap packing-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TODO LISTO PARA SALIR</p>
+            <h2>Lista para empacar</h2>
+            <p class="muted" data-packing-trip>Lista de equipaje</p>
+            <p class="muted" data-packing-destination></p>
+          </div>
+          <p class="count-pill" data-packing-progress aria-live="polite">0 artículos listos</p>
+        </div>
+        <form class="packing-form" data-packing-form>
+          <label class="sr-only" for="packing-item">Nuevo artículo</label>
+          <input id="packing-item" name="packingItem" maxlength="100" placeholder="¿Qué necesitas llevar?" required>
+          <button class="btn btn-primary" type="submit">Añadir artículo</button>
+        </form>
+        <ul class="packing-list" data-packing-list aria-live="polite"></ul>
+        <div class="packing-actions">
+          <a class="btn btn-outline" href="itinerario.html">← Volver al itinerario</a>
+          <a class="btn btn-primary" data-packing-next href="clima.html">Consultar el clima <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-wrap footer-inner">
+        <a class="brand brand-light" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+        <p>Explora. Planifica. Vive la aventura.</p>
+        <a href="../index.html">Volver al inicio ↑</a>
+        <a href="privacidad.html">Privacidad y datos</a>
+        <small>© 2026 AVENTRA · Proyecto académico</small>
+      </div>
+    </footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

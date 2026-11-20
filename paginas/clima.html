@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta el pron&#243;stico del tiempo por ciudad para preparar mejor tu pr&#243;ximo viaje.">
+    <meta name="theme-color" content="#142630">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="AVENTRA">
+    <meta property="og:title" content="Clima | AVENTRA">
+    <meta property="og:description" content="Consulta el pron&#243;stico del tiempo por ciudad para preparar mejor tu pr&#243;ximo viaje.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Clima | AVENTRA">
+    <meta name="twitter:description" content="Consulta el pron&#243;stico del tiempo por ciudad para preparar mejor tu pr&#243;ximo viaje.">
+    <link rel="icon" type="image/png" href="../img/logo/media_2.png">
+    <title>Clima | AVENTRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+      <input class="mobile-menu-toggle" id="menu-movil" type="checkbox" aria-label="Mostrar menú de navegación">
+      <label class="mobile-menu-button" for="menu-movil" aria-controls="main-nav mobile-account"><span aria-hidden="true">☰</span><span>Menú</span></label>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="../index.html">Inicio</a>
+        <a href="destinos.html" class="active">Destinos</a>
+        <a href="favoritos.html">Favoritos</a>
+        <a href="itinerario.html">Itinerario</a>
+        <a href="acerca.html">Acerca de</a>
+      </nav>
+      <a id="mobile-account" class="account-link" href="login.html"><span class="account-icon" aria-hidden="true">◉</span> Cuenta</a>
+    </header>
+    <main id="contenido-principal">
+      <section class="weather-section" id="clima">
+        <div class="section-wrap weather-layout">
+          <div>
+            <p class="eyebrow">CONDICIONES ACTUALES</p>
+            <h2>Consulta el clima</h2>
+            <p class="muted">Revisa el pronóstico antes de preparar tu viaje.</p>
+            <p class="muted" data-weather-trip-saved hidden></p>
+            <a class="btn btn-primary" data-weather-itinerary href="itinerario.html" hidden>Volver a mi itinerario <span aria-hidden="true">→</span></a>
+            <a class="btn btn-outline" href="destinos.html">Explorar destinos</a>
+          </div>
+          <div class="weather-card">
+            <div class="weather-top">
+              <div>
+                <p class="muted">Madrid, España</p>
+                <div class="temperature">
+                  26<span>°C</span>
+                </div>
+                <strong>☀ Despejado</strong>
+                <p class="muted">Viento: 12 km/h</p>
+              </div>
+              <div class="weather-sun">
+                ☀
+              </div>
+            </div>
+            <div class="forecast-title">
+              Pronóstico
+            </div>
+            <div class="forecast">
+              <div>
+                <span>Lunes</span><b>☀</b><strong>26 °C</strong>
+              </div>
+              <div>
+                <span>Martes</span><b>⛅</b><strong>24 °C</strong>
+              </div>
+              <div>
+                <span>Miércoles</span><b>☁</b><strong>22 °C</strong>
+              </div>
+            </div>
+            <p class="rain-note">Probabilidad de lluvia:<strong>10 %</strong></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-wrap footer-inner">
+        <a class="brand brand-light" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+        <p>Explora. Planifica. Vive la aventura.</p>
+        <a href="../index.html">Volver al inicio ↑</a>
+        <a href="privacidad.html">Privacidad y datos</a>
+        <small>© 2026 AVENTRA · Proyecto académico</small>
+      </div>
+    </footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

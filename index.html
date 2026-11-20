@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora destinos, guarda tus lugares favoritos y organiza itinerarios de viaje con AVENTRA.">
+    <meta name="theme-color" content="#142630">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="AVENTRA">
+    <meta property="og:title" content="Inicio | AVENTRA">
+    <meta property="og:description" content="Explora destinos, guarda tus lugares favoritos y organiza itinerarios de viaje con AVENTRA.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Inicio | AVENTRA">
+    <meta name="twitter:description" content="Explora destinos, guarda tus lugares favoritos y organiza itinerarios de viaje con AVENTRA.">
+    <link rel="icon" type="image/png" href="img/logo/media_2.png">
+    <title>Inicio | AVENTRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="AVENTRA, inicio"><img class="brand-logo" src="img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+      <input class="mobile-menu-toggle" id="menu-movil" type="checkbox" aria-label="Mostrar menú de navegación">
+      <label class="mobile-menu-button" for="menu-movil" aria-controls="main-nav mobile-account"><span aria-hidden="true">☰</span><span>Menú</span></label>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="paginas/destinos.html">Destinos</a>
+        <a href="paginas/favoritos.html">Favoritos</a>
+        <a href="paginas/itinerario.html">Itinerario</a>
+        <a href="paginas/acerca.html">Acerca de</a>
+      </nav>
+      <a id="mobile-account" class="account-link" href="paginas/login.html"><span class="account-icon" aria-hidden="true">◉</span> Cuenta</a>
+    </header>
+    <main id="contenido-principal">
+      <section class="home-hero">
+        <div class="hero section-wrap">
+          <div class="hero-copy">
+            <p class="hero-kicker"><span aria-hidden="true">✦</span> AVENTRA · INSPIRACIÓN PARA VIAJAR</p>
+            <h1>El mundo te espera.<br><span>Ve a descubrirlo.</span></h1>
+            <p class="hero-description">Encuentra lugares que te mueven, planea tu próxima aventura y haz que cada viaje cuente.</p>
+            <form action="paginas/destinos.html" class="home-search-form" method="get" role="search">
+              <div class="search-bar">
+                <span aria-hidden="true" class="search-icon">⌕</span>
+                <div class="home-search-input-wrap">
+                  <input id="home-destination-search" aria-label="Buscar país, ciudad o experiencia" aria-autocomplete="list" aria-controls="home-search-suggestions" aria-expanded="false" autocomplete="off" name="q" placeholder="¿País, ciudad o experiencia?" type="search">
+                  <ul class="home-search-suggestions" id="home-search-suggestions" role="listbox" aria-label="Sugerencias de destinos" hidden></ul>
+                </div>
+                <button class="btn btn-primary" type="submit">Explorar <span>→</span></button>
+              </div>
+              <div class="home-search-tools" aria-label="Filtros de destinos">
+                <label>
+                  <span>Región</span>
+                  <select name="region">
+                    <option value="">Todas las regiones</option>
+                    <option value="América">América</option>
+                    <option value="Europa">Europa</option>
+                    <option value="Asia">Asia</option>
+                    <option value="África">África</option>
+                    <option value="Oceanía">Oceanía</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Experiencia</span>
+                  <select name="experience">
+                    <option value="">Cualquier experiencia</option>
+                    <option value="Naturaleza">Naturaleza</option>
+                    <option value="Cultura">Cultura</option>
+                    <option value="Playas">Playas y relax</option>
+                    <option value="Ciudades">Ciudades</option>
+                  </select>
+                </label>
+                <details class="home-search-advanced">
+                  <summary>Más filtros</summary>
+                  <div class="home-search-advanced-fields">
+                    <label>
+                      <span>Actividad</span>
+                      <select name="activity">
+                        <option value="">Cualquier actividad</option>
+                        <option value="naturaleza">Aventura al aire libre</option>
+                        <option value="cultura">Historia y cultura</option>
+                        <option value="playas">Playa y descanso</option>
+                        <option value="ciudades">Recorridos urbanos</option>
+                        <option value="gastronomia">Gastronomía</option>
+                      </select>
+                    </label>
+                    <label>
+                      <span>Clima orientativo</span>
+                      <select name="climate">
+                        <option value="">Cualquier clima</option>
+                        <option value="Tropical">Cálido / tropical</option>
+                        <option value="Templado">Templado</option>
+                        <option value="Frío">Frío</option>
+                        <option value="Variado">Variado</option>
+                      </select>
+                    </label>
+                  </div>
+                  <small>El clima es una referencia general; consulta el pronóstico antes de viajar.</small>
+                </details>
+              </div>
+            </form>
+            <nav class="home-popular-searches" aria-label="Destinos populares">
+              <span>Populares:</span>
+              <a href="paginas/lugares/detalle.html?pais=colombia">Colombia</a>
+              <a href="paginas/lugares/detalle.html?pais=espana">España</a>
+              <a href="paginas/lugares/detalle.html?pais=japon">Japón</a>
+            </nav>
+            <div class="hero-destinations" id="destinos" role="region" aria-roledescription="carrusel" aria-label="Destinos destacados">
+              <div class="hero-destinations-track">
+                <div class="hero-destination-slide" role="group" aria-roledescription="diapositiva" aria-label="Destinos 1 de 2">
+                  <a class="hero-destination hero-destination-colombia" href="paginas/lugares/detalle-colombia.html">
+                    <span>AMÉRICA DEL SUR</span><strong>Colombia</strong><b aria-hidden="true">↗</b>
+                  </a>
+                  <a class="hero-destination hero-destination-spain" href="paginas/lugares/detalle-espana.html">
+                    <span>EUROPA</span><strong>España</strong><b aria-hidden="true">↗</b>
+                  </a>
+                  <a class="hero-destination hero-destination-japan" href="paginas/lugares/detalle-japon.html">
+                    <span>ASIA</span><strong>Japón</strong><b aria-hidden="true">↗</b>
+                  </a>
+                </div>
+                <div class="hero-destination-slide" role="group" aria-roledescription="diapositiva" aria-label="Destinos 2 de 2" aria-hidden="true">
+                  <a class="hero-destination hero-destination-italy" href="paginas/lugares/detalle-italia.html" tabindex="-1">
+                    <span>EUROPA</span><strong>Italia</strong><b aria-hidden="true">↗</b>
+                  </a>
+                  <a class="hero-destination hero-destination-brazil" href="paginas/lugares/detalle-brasil.html" tabindex="-1">
+                    <span>AMÉRICA DEL SUR</span><strong>Brasil</strong><b aria-hidden="true">↗</b>
+                  </a>
+                  <a class="hero-destination hero-destination-peru" href="paginas/lugares/detalle-peru.html" tabindex="-1">
+                    <span>AMÉRICA DEL SUR</span><strong>Perú</strong><b aria-hidden="true">↗</b>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a class="hero-all-destinations" href="paginas/destinos.html">Explorar los 32 destinos <span aria-hidden="true">→</span></a>
+          </div>
+          <figure class="hero-art">
+            <img src="img/imaginicio/imagen-superior-opt.jpg" alt="Lago turquesa rodeado de montañas al atardecer" fetchpriority="high" loading="eager" decoding="async">
+            <figcaption class="art-label">
+              <span class="pin" aria-hidden="true">⌖</span>
+              <span><strong>Respira algo nuevo</strong><small>Tu próxima historia comienza aquí</small></span>
+            </figcaption>
+            <span class="hero-photo-index" aria-hidden="true">01 / 32</span>
+          </figure>
+        </div>
+      </section>
+      <section class="experience-section">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">ENCUENTRA TU ESTILO</p>
+              <h2>¿Qué tipo de aventura te gustaría vivir?</h2>
+              <p class="muted">Elige una experiencia y descubre ideas para tu próximo viaje.</p>
+            </div>
+          </div>
+          <div class="experience-grid">
+            <a class="experience-card experience-card-nature" href="paginas/itinerario.html?categoria=Naturaleza#itinerarios-recomendados">
+              <img src="img/imaginicio/naturaleza.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <span class="experience-card-icon" aria-hidden="true">🌿</span>
+              <span class="experience-card-copy"><strong>Naturaleza</strong><small>Montañas, bosques y aire libre</small></span>
+              <span class="experience-card-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="experience-card experience-card-culture" href="paginas/itinerario.html?categoria=Cultura#itinerarios-recomendados">
+              <img src="img/imaginicio/cultura.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <span class="experience-card-icon" aria-hidden="true">🏛️</span>
+              <span class="experience-card-copy"><strong>Cultura</strong><small>Historia, arte y sabores locales</small></span>
+              <span class="experience-card-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="experience-card experience-card-relax" href="paginas/itinerario.html?categoria=Relax#itinerarios-recomendados">
+              <img src="img/imaginicio/relazyplaya.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <span class="experience-card-icon" aria-hidden="true">🌊</span>
+              <span class="experience-card-copy"><strong>Relax y playas</strong><small>Mar, descanso y atardeceres</small></span>
+              <span class="experience-card-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="experience-card experience-card-cities" href="paginas/itinerario.html?categoria=Ciudades#itinerarios-recomendados">
+              <img src="img/imaginicio/ciudades.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <span class="experience-card-icon" aria-hidden="true">🏙️</span>
+              <span class="experience-card-copy"><strong>Ciudades</strong><small>Calles, barrios y nuevas historias</small></span>
+              <span class="experience-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-wrap footer-inner">
+        <a class="brand brand-light" href="index.html" aria-label="AVENTRA, inicio"><img class="brand-logo" src="img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+        <p>Explora. Planifica. Vive la aventura.</p>
+        <a href="index.html">Volver al inicio ↑</a>
+        <a href="paginas/privacidad.html">Privacidad y datos</a>
+        <small>© 2026 AVENTRA · Proyecto académico</small>
+      </div>
+    </footer>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revisa y corrige las fechas de tu itinerario para continuar planificando tu viaje.">
+    <meta name="theme-color" content="#142630">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="AVENTRA">
+    <meta property="og:title" content="Fecha inv&#225;lida | AVENTRA">
+    <meta property="og:description" content="Revisa y corrige las fechas de tu itinerario para continuar planificando tu viaje.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fecha inv&#225;lida | AVENTRA">
+    <meta name="twitter:description" content="Revisa y corrige las fechas de tu itinerario para continuar planificando tu viaje.">
+    <link rel="icon" type="image/png" href="../img/logo/media_2.png">
+    <title>Fecha inválida | AVENTRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+      <input class="mobile-menu-toggle" id="menu-movil" type="checkbox" aria-label="Mostrar menú de navegación">
+      <label class="mobile-menu-button" for="menu-movil" aria-controls="main-nav mobile-account"><span aria-hidden="true">☰</span><span>Menú</span></label>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="../index.html">Inicio</a>
+        <a href="destinos.html">Destinos</a>
+        <a href="favoritos.html">Favoritos</a>
+        <a href="itinerario.html" class="active">Itinerario</a>
+        <a href="acerca.html">Acerca de</a>
+      </nav>
+      <a id="mobile-account" class="account-link" href="login.html"><span class="account-icon" aria-hidden="true">◉</span> Cuenta</a>
+    </header>
+    <main id="contenido-principal">
+      <section class="planner-section">
+        <div class="section-wrap" style="max-width:760px">
+          <div class="planner-form">
+            <p class="eyebrow">REVISAR ITINERARIO</p>
+            <h2 style="font:800 32px Manrope,sans-serif;margin:0 0 22px">Corrige las fechas del viaje</h2>
+            <label>Fecha de inicio<input type="date" value="2026-08-26"></label><label>Fecha de finalización<input type="date" value="2026-08-30"></label>
+            <div style="background:#fff0ef;border:1px solid #f3c4c0;color:#a63832;border-radius:8px;padding:14px;margin:8px 0 20px">
+              <strong>⚠ Fecha inválida</strong>
+              <p style="margin:5px 0 0">La fecha de finalización debe ser posterior a la fecha de inicio.</p>
+            </div>
+            <a href="nuevo-viaje.html" class="btn btn-primary">Corregir datos</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-wrap footer-inner">
+        <a class="brand brand-light" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA" loading="eager" decoding="async"></a>
+        <p>Explora. Planifica. Vive la aventura.</p>
+        <a href="../index.html">Volver al inicio ↑</a>
+        <a href="privacidad.html">Privacidad y datos</a>
+        <small>© 2026 AVENTRA · Proyecto académico</small>
+      </div>
+    </footer>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>
